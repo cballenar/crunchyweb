@@ -4,8 +4,15 @@
 	Modify as content requires.
 ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-	// Style adjustments for screens wider than 480px
+@media only screen and (min-width: 720px) {
+	.mobile-only { display: none; }
+	.megatron { 
+		width: 80%; min-width: 720px; max-width: 1200px; 
+		padding: 2rem; 
+
+		h1 { @include rem('font-size', 96px); } 
+		h2 { @include rem('font-size', 72px); line-height: .9375em; } 
+		.button { @include rem('font-size', 24px); } }
 }
 
 @media print,
