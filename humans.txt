@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Carlos Ballena -- Cruncher -- @cballenar
 
 # THANKS
 
-    <name>
+    Everyone helping to make the web a better place.
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    jQuery, Modernizr, FancyBox, WuFoo
