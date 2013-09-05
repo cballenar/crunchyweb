@@ -8,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>CrunchyWeb</title>
         <meta name="description" content="Web development done right.">
+        <meta name="keywords" content="web, design, development, web design, web development, graphic design, html5, css3, website, crunch, crunchy, crunchyweb" />
         <meta name="viewport" content="width=device-width">
 
         <script type="text/javascript" src="//use.typekit.net/jba3bwu.js"></script>
@@ -20,7 +21,7 @@
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <main class="site-content">
@@ -75,11 +76,34 @@
             <p>By <a href="http://cballenar.me">CBallenar</a></p>
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+
+        <script>
+
+            $(document).ready(function() {
+                // Call fancybox for Contact form
+                $(".fancybox").fancybox({
+
+                    afterLoad: function() { 
+                        this.content = $('.form-markup').html(); },
+
+                    width: 'auto',
+                    height: 'auto',
+
+                    helpers : {
+                        overlay : {
+                            css : { 'background' : 'rgba(0, 0, 0, .25)' } } } });
+            });
+
+            // Google Analytics
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-28609193-1');ga('send','pageview');
+        </script>
 
     </body>
 </html>
