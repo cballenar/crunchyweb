@@ -92,36 +92,31 @@ body .fancybox-close {
 		letter-spacing: -.03125em; }
 
 	.button { 
+		position: relative;
+
 		$button-bg-color: $crunchy-color-dark;
 		background: $button-bg-color; 
 
 		border: none;
 		color: #FBFBFB; 
+		box-shadow: 0 6px darken($button-bg-color, 20%); 
 		text-shadow: none;
 
 		font-size: 16px;
 		line-height: 1em;
 		font-weight: 700;
 
+		@include transition(all, .1s, ease);
+
 		&:hover {
+			top: 2px;
+			box-shadow: 0 4px darken($button-bg-color, 25%); 
 			background: darken($button-bg-color, 2.5%); }
 
 		&:active {
-			background: lighten($button-bg-color, 2.5%); }
-
-		// Presable button - 3D effect
-		&.press-me {
-			position: relative;
-			box-shadow: 0 6px darken($button-bg-color, 20%); 
-			@include transition(all, .1s, ease);
-
-			&:hover { 
-				top: 2px;
-				box-shadow: 0 4px darken($button-bg-color, 25%); } 
-
-			&:active { 
-				top: 4px;
-				box-shadow: 0 2px darken($button-bg-color, 10%); } } } }
+			top: 4px;
+			box-shadow: 0 2px darken($button-bg-color, 10%);
+			background: lighten($button-bg-color, 2.5%); } } }
 
 footer { 
 	position: absolute; 
@@ -146,4 +141,12 @@ form.contact {
 
 		font-weight: 100;
 		text-transform: uppercase; 
-		@include rem('font-size', 12px); } }
+		@include rem('font-size', 12px); } 
+
+	.req { color: $crunchy-color; } }
+
+.js .for-non-interactive     { display: none; }
+.no-js .for-non-interactive  { display: block; }
+
+.js .for-interactive-only    { display: block; }
+.no-js .for-interactive-only { display: none; }

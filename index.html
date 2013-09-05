@@ -30,7 +30,8 @@
                 <div class="callout megatron">
                     <h1>Cr<span class="kern-1">un</span>chy<br class="mobile-only" /><span class="the-web"><span class="kern-3">W</span>eb</span></h1>
                     <h2>Web development<br /><em>done right</em>.</h2>
-                    <button class="button press-me fancybox" data-print="info@crunchyweb.com">Contact Us <i class="icon-comment screen-only"></i></button>
+                    <p class="for-non-interactive">Contact us at <a href="mailto:info@crunchyweb.com">info@crunchyweb.com</a>.</p>
+                    <button class="button form-trigger for-interactive-only">Contact Us <i class="icon-comment screen-only"></i></button>
                 </div>
             </div>
         </main>
@@ -86,7 +87,7 @@
 
             $(document).ready(function() {
                 // Call fancybox for Contact form
-                $(".fancybox").fancybox({
+                $(".form-trigger").fancybox({
 
                     afterLoad: function() { 
                         this.content = $('.form-markup').html(); },

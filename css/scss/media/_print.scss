@@ -17,6 +17,9 @@
 	a[href]:after {
 		content: " (" attr(href) ")"; }
 
+	a[href^="mailto:"]:after {
+		content: "" }
+
 	abbr[title]:after {
 		content: " (" attr(title) ")"; }
 
@@ -64,5 +67,10 @@
 		content: " (" attr(data-print) ")"; }
 
 	// Cuz certain elements were not meant to be printed
-	.screen-only { display: none; }
+	.screen-only,
+	.js .for-interactive-only,
+	.no-js .for-interactive-only { display: none; }
+
+	.js .for-non-interactive,
+	.no-js .for-non-interactive { display: block; }
 }
