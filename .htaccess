@@ -17,9 +17,9 @@
 # http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 # http://enable-cors.org/
 
-<IfModule mod_headers.c>
-   Header set Access-Control-Allow-Origin "*"
-</IfModule>
+# <IfModule mod_headers.c>
+#    Header set Access-Control-Allow-Origin "*"
+# </IfModule>
 
 # ------------------------------------------------------------------------------
 # | CORS-enabled images                                                        |
@@ -316,7 +316,7 @@ AddDefaultCharset utf-8
 # These files may be left by some text editors and can pose a great security
 # danger when anyone has access to them.
 
-<FilesMatch "(^#.*#|\.(scss|bak|config|dist|fla|inc|ini|log|psd|ai|sh|sql|sw[op])|~)$">
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
     Order allow,deny
     Deny from all
     Satisfy All
