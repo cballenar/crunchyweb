@@ -5,22 +5,22 @@
 
 /* Essentials
 ------------------------------------------------------------------------------------ */
-$crunchy-color: #F0750F;
-$crunchy-color-dark: #242424;
-
+*:last-child { margin-bottom: 0; }
 html { 
 	background: $crunchy-color; }
-	
-	// -webkit-background-size: 60px 60px;
-	//    -moz-background-size: 60px 60px;
-	//         background-size: 60px 60px;
 
-	// background-color: $crunchy-color;
-	// background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .05) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
-	// background-image:    -moz-linear-gradient(-45deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
-	// background-image:     -ms-linear-gradient(-45deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
-	// background-image:      -o-linear-gradient(-45deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
-	// background-image:         linear-gradient(-45deg, rgba(255, 255, 255, .05) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+button {
+	font-family: 'proxima-nova', sans-serif; 
+	
+	margin: 0 auto; padding: .5em 2em; 
+	border-radius: .25em; 
+
+	i { 
+		display: inline-block; 
+		
+		&:first-child { margin-right: .5em; margin-left: -.25em; } 
+		&:last-child { margin-right: -.25em; margin-left: .5em; } } }
+
 
 /* Helpers
 ------------------------------------------------------------------------------------ */
@@ -28,52 +28,32 @@ html {
 .kern-1 { letter-spacing: -.03125em; }
 .kern-3 { letter-spacing: -.06250em; }
 
-/* Animated rotating icon */
-.icon-spin {
-	display: inline-block;
-	-webkit-animation: spin 2s infinite linear;
-	   -moz-animation: spin 2s infinite linear;
-	     -o-animation: spin 2s infinite linear;
-	        animation: spin 2s infinite linear;
-}
-/* Prevent stack and spinners from being taken inline when inside a link */
-a .icon-stack,
-a .icon-spin {
-	display: inline-block;
-	text-decoration: none; }
-
-@-webkit-keyframes spin {
-	0% {   -webkit-transform: rotate(0deg);   }
-	100% { -webkit-transform: rotate(359deg); } }
-@-moz-keyframes spin {
-	0% {      -moz-transform: rotate(0deg);   }
-	100% {    -moz-transform: rotate(359deg); } }
-@-ms-keyframes spin {
-	0% {       -ms-transform: rotate(0deg);   }
-	100% {     -ms-transform: rotate(359deg); } }
-@-o-keyframes spin {
-	0% {        -o-transform: rotate(0deg);   }
-	100% { 	    -o-transform: rotate(359deg); } }
 @keyframes spin {
-	0% {           transform: rotate(0deg);   }
-	100% {         transform: rotate(359deg); } }
+	0% { transform: rotate(0deg);   }
+	100% { transform: rotate(359deg); } }
+	// animation: spin 12s infinite linear;  
 
-@-webkit-keyframes unspin {
-	0% {   -webkit-transform: rotate(0deg);   }
-	100% { -webkit-transform: rotate(-359deg); } }
-@-moz-keyframes unspin {
-	0% {      -moz-transform: rotate(0deg);   }
-	100% {    -moz-transform: rotate(-359deg); } }
-@-ms-keyframes unspin {
-	0% {       -ms-transform: rotate(0deg);   }
-	100% {     -ms-transform: rotate(-359deg); } }
-@-o-keyframes unspin {
-	0% {        -o-transform: rotate(0deg);   }
-	100% { 	    -o-transform: rotate(-359deg); } }
 @keyframes unspin {
-	0% {           transform: rotate(0deg);   }
-	100% {         transform: rotate(-359deg); } }
+	0% { transform: rotate(0deg);   }
+	100% { transform: rotate(-359deg); } }
+	// animation: unspin 1s infinite linear;
 
+// Fancybox + Fontawesome
+body .fancybox-close {
+
+	color: #999;
+	background-image: none; 
+	box-shadow: none;
+	
+	position: absolute; z-index: 8040;
+	
+	top: 6px; right: 6px;
+	width: 18px; height: 18px;
+	font-size: 18px;
+	text-align: center; vertical-align: middle;
+
+	cursor: pointer;
+}
 
 /* Megatron
 ------------------------------------------------------------------------------------ */
@@ -96,52 +76,33 @@ a .icon-spin {
 		line-height: .825em;
 		font-weight: 900; 
 
-		color: #EBEBEB; 
-
 		margin: 0 0 24px; 
 
 		.the-web {
 			color: $crunchy-color-dark; } }
 
 	h2 {
+		margin: 0 0 24px; 
+
 		@include rem('font-size', 36px);
 		line-height: 1em; 
 		font-weight: 100; 
-
-		margin: 0 0 24px; }
+		letter-spacing: -.03125em; }
 
 	.button { 
 		$button-bg-color: $crunchy-color-dark;
 		background: $button-bg-color; 
 
+		border: none;
 		color: #FBFBFB; 
+		text-shadow: none;
 
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1em;
 		font-weight: 700;
 
-		display: block; 
-		width: 50%; min-width: 120px; max-width: 240px;
-		text-shadow: none;
-
-		cursor: pointer;
-
-		i { margin-right: .5em; margin-left: -.25em; 
-			display: inline-block;
-			-webkit-animation: spin 12s infinite linear;
-			   -moz-animation: spin 12s infinite linear;
-			     -o-animation: spin 12s infinite linear;
-			        animation: spin 12s infinite linear; } 
-
 		&:hover {
-			background: darken($button-bg-color, 2.5%);
-
-			i { 
-				display: inline-block;
-				-webkit-animation: unspin 1s infinite linear;
-				   -moz-animation: unspin 1s infinite linear;
-				     -o-animation: unspin 1s infinite linear;
-				        animation: unspin 1s infinite linear; } }
+			background: darken($button-bg-color, 2.5%); }
 
 		&:active {
 			background: lighten($button-bg-color, 2.5%); }
@@ -160,7 +121,34 @@ a .icon-spin {
 				top: 4px;
 				box-shadow: 0 2px darken($button-bg-color, 10%); } } } }
 
+footer { 
+	position: absolute; 
+	bottom: 1em; right: 1em; 
 
+	p,
+	a { color: rgba(100%,100%,100%,.25); } 
+
+	a:hover { color: rgba(100%,100%,100%,.75); } }
+
+/* Contact Form
+------------------------------------------------------------------------------------ */
+form.contact {
+	margin: 0; padding: 0;
+
+	button {
+		display: block; float:right;
+
+		border: none;
+		color: #EBEBEB;
+		background: $crunchy-color-dark;
+
+		font-weight: 100;
+		text-transform: uppercase; 
+		@include rem('font-size', 12px); } }
+
+
+/* Other media
+------------------------------------------------------------------------------------ */
 @media only screen and (min-width: 720px) {
 	.mobile-only { display: none; }
 	.megatron { 
@@ -171,29 +159,3 @@ a .icon-spin {
 		h2 { @include rem('font-size', 72px); line-height: .9375em; } 
 		.button { @include rem('font-size', 24px); } }
 }
-
-
-button,
-.button {
-	margin: 0 auto; padding: .5em 2em; 
-	border-radius: .25em; 
-
-	i { 
-		margin-right: .5em; margin-left: -.25em; 
-		display: inline-block; } }
-
-form {
-
-	&.contact {
-		padding: 0;
-		margin-bottom: 0; }
-
-	button {
-	display: block; float:right;
-	color: #EBEBEB;
-	background: $crunchy-color-dark;
-	border: none;
-	text-transform: uppercase; 
-	@include rem('font-size', 12px);
-	font-family: 'proxima-nova', sans-serif;
-	font-weight: 100; } }

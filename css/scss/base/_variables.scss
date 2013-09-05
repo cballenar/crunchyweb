@@ -20,7 +20,8 @@ $style-buttons:             false;
 $style-code:                false;
 
 // 
-
+$crunchy-color: #F0750F;
+$crunchy-color-dark: #242424;
 
 /* Type - use pixels for font-size & line-height
 ------------------------------------------------------------------------------------ */
@@ -85,16 +86,16 @@ $gray-dark:                 #707070;
 $gray-darker:               #202020; 
 
 // Basic Elements
-$body-bg:                   $gray-lighter;
+$body-bg:                   $crunchy-color;
 
-$font-body-copy-color:      $gray-darker;
+$font-body-copy-color:      $gray-lighter;
 $font-heading-color:        inherit; // If inherit it will use the color for the body copy
 
 $selection-text:            $gray-light;
 $selection-bg:              $gray-dark; // Browser default is #B3D4FC
 
 // Link colors
-$link-color:                #1B4781;
+$link-color:                $gray-lighter;
 $link-color-h:              darken($link-color, 5%);
 $link-color-a:              #DD4B39;
 $link-color-v:              $link-color;
