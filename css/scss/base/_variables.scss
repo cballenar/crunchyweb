@@ -1,5 +1,17 @@
-/*  Variables
+/* ====================================================================================
+**  Variables - Manage existing and new variables
 ==================================================================================== */
+
+/* Author Variables
+------------------------------------------------------------------------------------ */
+$crunchy-color:             #F0750F;
+$crunchy-color-dark:        #242424;
+
+$primary-color:             #BADA55;
+$accent-color:              #DE1E7E;
+
+// etc...
+
 
 /* Switches
 ------------------------------------------------------------------------------------ */
@@ -7,21 +19,12 @@
 $rem-to-px-fallback:        true; // Adds px fallback to properties that use the rem() function
 
 // Special Styles (Use with caution)
-$animate-all-links:         false; // adds transition(all, .2s ease); to all links
-$bg-no-repeat:              false; // adds * { background: no-repeat; }
+$animate-all-links:         true; // adds transition(all, .2s ease); to all links
+$bg-no-repeat:              true; // adds * { background: no-repeat; }
 $it-s-all-relative:         false; // adds * { position: relative; }
-$box-sizing-for-all:        false; // adds * { box-sizing: border-box; } (w/ browser prefixes)
+$box-sizing-for-all:        true; // adds * { box-sizing: border-box; } (w/ browser prefixes)
+$vertical-align-middle:     false; // adds * { vertical-align: middle; }
 
-// Styled elements (Disable for absolute control)
-$style-blockquotes:         false;
-$style-tables:              false;
-$style-forms:               true;
-$style-buttons:             false;
-$style-code:                false;
-
-// 
-$crunchy-color: #F0750F;
-$crunchy-color-dark: #242424;
 
 /* Type - use pixels for font-size & line-height
 ------------------------------------------------------------------------------------ */
@@ -92,13 +95,17 @@ $font-body-copy-color:      $gray-lighter;
 $font-heading-color:        inherit; // If inherit it will use the color for the body copy
 
 $selection-text:            $gray-light;
-$selection-bg:              $gray-dark; // Browser default is #B3D4FC
+$selection-bg:              $gray-darker; // Browser default is #B3D4FC
 
 // Link colors
 $link-color:                $gray-lighter;
 $link-color-h:              darken($link-color, 5%);
 $link-color-a:              #DD4B39;
 $link-color-v:              $link-color;
+
+// Misc
+$mark-bg-color:             #FFFF00;
+$mark-text-color:           $font-body-copy-color;
 
 // Borders 
 $border-color:              $gray;
