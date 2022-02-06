@@ -17,89 +17,26 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <style type="text/css">.feedback-button { padding-bottom: 2.25em; text-decoration: none; }</style>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <main class="site-content">
             <div class="wrapper">
                 <div class="callout megatron">
                     <h1>Cr<span class="kern-1">un</span>chy<br class="mobile-only" /><span class="the-web"><span class="kern-3">W</span>eb</span></h1>
                     <h2>Web development<br /><em>done right</em>.</h2>
-                    <p class="for-non-interactive">Contact us at <a href="mailto:info@crunchyweb.com">info@crunchyweb.com</a>.</p>
-                    <button class="button form-trigger for-interactive-only">Contact Us <i class="icon-comment screen-only"></i></button>
+                    <noscript>Contact us at <a href="mailto:info@crunchyweb.com">info@crunchyweb.com</a>.</noscript>
                 </div>
             </div>
         </main>
-        <aside class="hidden form-markup">
-            <form
-                id="form2"
-                name="form2"
-                class="contact wufoo topLabel page"
-
-                enctype="multipart/form-data"
-                method="post"
-                novalidate
-                action="https://cballenar.wufoo.com/forms/m7x3s5/#public">
-
-                <label class="desc" id="title109" for="Field109">Name <span id="req_109" class="req">*</span></label>
-                <input id="Field109" name="Field109" type="text" class="field text medium" placeholder="John D&#039;oh!" maxlength="255" tabindex="1" required />
-
-                <label class="desc" id="title7" for="Field7">Email <span id="req_7" class="req">*</span></label>
-                <input id="Field7" name="Field7" type="email" spellcheck="false" class="field text medium" placeholder="john.doh@example.com" maxlength="255" tabindex="2" required /> 
-
-                <label class="desc" id="title108" for="Field108">Message <span id="req_108" class="req">*</span></label>
-                <textarea 
-                    id="Field108" 
-                    name="Field108" 
-                    class="field textarea medium" 
-                    spellcheck="true" 
-                    rows="10" cols="50" 
-                    tabindex="3" 
-                    onkeyup=""
-                    placeholder="Hello..."
-                    required  ></textarea>
-
-                <button id="saveForm" name="saveForm" class="button btTxt submit" type="submit">Send</button>
-
-                <div class="hidden">
-                    <label for="comment">Do Not Fill This Out</label>
-                    <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                    <input type="hidden" id="idstamp" name="idstamp" value="8xlMQXsRedA0LB22z4LgzegE4fjQ95x9AQ2/G5oRd3o=" />
-                </div>
-
-            </form> 
-        </aside>
         <footer>
             <p>By <a href="http://cballenar.me">CBallenar</a></p>
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
-        <script src="js/plugins.js"></script>
-
         <script>
-
-            $(document).ready(function() {
-                // Call fancybox for Contact form
-                $(".form-trigger").fancybox({
-
-                    afterLoad: function() { 
-                        this.content = $('.form-markup').html(); },
-
-                    width: 'auto',
-                    height: 'auto',
-
-                    helpers : {
-                        overlay : {
-                            css : { 'background' : 'rgba(0, 0, 0, .25)' } } } });
-            });
-
             // Google Analytics
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -108,6 +45,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-28609193-1');ga('send','pageview');
         </script>
-
+        <script src="https://my.forms.app/static/feedback.js" type="text/javascript">  FormsAppFeedbackButton({ formId: "620043a76ab665110bb500be", buttonText: "Contact Us", buttonTextColor: "#FFFFFF", buttonBackground: "#000000", verticalAlligment: "bottom", horizontalAlligment: "center", width: 500,height: 500}); </script>
     </body>
 </html>
